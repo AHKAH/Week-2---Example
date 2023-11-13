@@ -7,23 +7,10 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:  AppBar(
-        title:const Text('Simple Flutter Tree'),
+        title: const Text('Simple Flutter Tree'),
       ),
-      body:const SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Welcome to my first app!'),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.star, color: Colors.yellow),
-                Text('My Second Text!'),
-                Icon(Icons.star, color: Colors.yellow),
-              ],
-            ),
-          ],
-        ),
+      body: const SafeArea(
+        child: Icon(Icons.star, color: Colors.yellow, size: 48.0),
       ),
     );
   }
