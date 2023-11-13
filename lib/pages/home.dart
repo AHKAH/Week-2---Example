@@ -6,11 +6,18 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:  AppBar(
+      appBar: AppBar(
         title: const Text('Simple Flutter Tree'),
       ),
       body: const SafeArea(
-        child: Icon(Icons.star, color: Colors.yellow, size: 48.0),
+        child: Image(
+          image: AssetImage(
+              'assets/doggo.jpg'), 
+          width: 200.0, 
+          height: 200.0,
+          fit: BoxFit
+              .cover, 
+        ),
       ),
     );
   }
