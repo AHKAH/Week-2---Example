@@ -1,5 +1,3 @@
-// ignore_for_file: sized_box_for_whitespace
-
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -8,22 +6,23 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Simple Flutter Tree'),
+      appBar:  AppBar(
+        title:const Text('Simple Flutter Tree'),
       ),
-      body: SafeArea(
-        child: Container(
-          // Make it fill the width of the app
-          width: double.infinity,
-          //try remove the line above and see what happens.
-          child: const Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text('Welcome to my first app!'),
-              Text('My second text')
-            ],
-          ),
+      body:const SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Welcome to my first app!'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.star, color: Colors.yellow),
+                Text('My Second Text!'),
+                Icon(Icons.star, color: Colors.yellow),
+              ],
+            ),
+          ],
         ),
       ),
     );
